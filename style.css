@@ -1,0 +1,160 @@
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+}
+
+/* Fundo */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(first-official-honkai-star-rail-live-wallpaper-released.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container da Busca */
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+}
+
+/* Container */
+.container {
+    gap: 12px;
+    max-width: 90%;
+    padding: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    justify-items: center;
+}
+
+/* Card */
+.card {
+    text-align: center;
+    position: relative;
+}
+
+.card p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagem dentro do Container */
+.container img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 25px;  /* Espaço para a legenda */
+    max-width: 100%;
+}
+
+/* Efeito de Escala na Imagem ao Passar o Mouse */
+.container img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteúdo do Modal */
+.modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Botão Fechar */
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para o Rodapé */
+.footer {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 3px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Adaptações para Tablets */
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url(StarRail_Image_1681923682.0.jpg);
+    }
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+/* Adaptações para Celulares */
+@media only screen and (max-width: 576px) {
+    body {
+        background-image: url(image.png);
+    }
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    .modal-conteudo {
+        width: 90%;
+    }
+}
